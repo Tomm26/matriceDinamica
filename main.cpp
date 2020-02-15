@@ -16,18 +16,18 @@ int main()
 
 	//ricavo le dimensioni della matrice dal file
 	leggiDim(nomefile, r, c);
-
+	n = r * c;
 	//alloco dinamicamente la matrice
 	matrice = new int*[r];
 	for (int i = 0; i < r; i++) {
 		matrice[i] = new int[c];
 	}
 	//alloco il vettore
-	vettoreMatrix = new int[r*c];
+	vettoreMatrix = new int[n];
 
-	//carico matrice e assegno ad n il valore di r*c
+	//carico matrice
 	leggiMatriceFile(matrice, nomefile,r,c);
-	n = r * c;
+
 
 	//stampo matrice
 	stampaMatrice(matrice, r, c);
